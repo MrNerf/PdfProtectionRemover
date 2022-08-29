@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using System.Windows;
 
 namespace PdfProtectionRemoverGui
@@ -13,5 +8,14 @@ namespace PdfProtectionRemoverGui
     /// </summary>
     public partial class App : Application
     {
+        private void App_OnStartup(object sender, StartupEventArgs e)
+        {
+            var procName = Process.GetCurrentProcess().ProcessName;
+            var processes = Process.GetProcessesByName(procName);
+
+            if (processes.Length <= 1) return;
+            MessageBox.Show("Процесс " + procName + " уже запущен!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Stop);
+            Shutdown();
+        }
     }
 }

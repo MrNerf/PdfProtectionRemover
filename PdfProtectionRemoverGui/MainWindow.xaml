@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         
         mc:Ignorable="d"
-        Title="PDF Protection Remover Gui" Height="230" Width="360">
+        Title="PDF Protection Remover Gui" Height="250" Width="360">
     <Grid>
         <Grid.Background>
             <SolidColorBrush Color="#FFE8E8E8"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="35"/>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -58,7 +58,7 @@
                 Grid.Row="3" Grid.Column="0"
                 Grid.ColumnSpan="2"
                 Foreground="#FF0610B0"
-                Margin="5, 0"
+                Margin="5, 0, 5, 5"
                 />
     </Grid>
 </Window>

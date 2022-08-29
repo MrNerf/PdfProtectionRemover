@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Win32;
@@ -49,6 +51,9 @@ namespace PdfProtectionRemoverGui
                                                                                                               "U_" + (string)FilesListBox.Items[cnt]));
                 StatusBar.Value += 100.0 / _fileNamesStrings.Length;
             }
+
+            Thread.Sleep(200);
+            Process.Start(new ProcessStartInfo(Path.GetDirectoryName(saveFileDialog.FileName) ?? @"c:\") {UseShellExecute = true});
         }
 
         private static OpenFileDialog PdfOpenFileDialog() => new OpenFileDialog()
