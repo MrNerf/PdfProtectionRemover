@@ -8,7 +8,7 @@
         Title="PDF Protection Remover Gui" Height="250" Width="360">
     <Grid>
         <Grid.Background>
-            <SolidColorBrush Color="#FFE8E8E8"/>
+            <SolidColorBrush Color="#DDE7F2"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -31,15 +31,22 @@
                 FontFamily="TimesNewRoman" 
                 FontSize="16" 
                 FontStyle="Italic"
-                FontWeight="Regular" Click="SelectFilesButton_Click"/>
+                FontWeight="Regular" Click="SelectFilesButton_Click" 
+                Background="#878ECD"
+                Foreground="#FB929E"
+                BorderBrush="#878ECD"/>
         <Label Grid.Row="0" Grid.Column="1"
                Content="Выбранные файлы"
+               Foreground="#FB929E"
                FontFamily="TimesNewRoman" />
         <ListBox
                 Name="FilesListBox"
                 Grid.Column="1" Grid.Row="1"
                 Margin="5, 0"/>
         <Button Name="RemoveProtectionButton"
+                Background="#878ECD"
+                BorderBrush="#878ECD"
+                Foreground="#FB929E"
                 Grid.Row="2" Grid.Column="0"
                 Grid.ColumnSpan="2"
                 Margin="5"
